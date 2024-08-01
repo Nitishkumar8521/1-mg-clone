@@ -1,0 +1,196 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "v@gmail.com"
+    },
+    {
+      "id": 2,
+      "email": "rekha@gmail.com"
+    },
+    {
+      "email": "nk@gmail.com",
+      "id": 3
+    },
+    {
+      "email": "nkk@gmail.com",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "SmartPhone",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkz2kjdQjM6DX7mLSYMtBrQMF_wRCFb-3cxwI5rPg1A&s",
+      "price": 15000,
+      "ratings": 5
+    },
+    {
+      "id": 2,
+      "title": "TV",
+      "src": "https://5.imimg.com/data5/SELLER/Default/2023/4/299765792/GM/GW/BT/6158633/50-inch-smart-android-led-tv-500x500.jpg",
+      "price": 25000,
+      "ratings": 4
+    },
+    {
+      "id": 3,
+      "title": "Laptop",
+      "src": "https://images-cdn.ubuy.co.in/633b75b241637808af7d4688-asus-laptop-l510-ultra-thin-laptop.jpg",
+      "price": 35000,
+      "ratings": 4.5
+    },
+    {
+      "id": 4,
+      "title": "Washing Machine",
+      "src": "https://whirlpoolindia.vtexassets.com/arquivos/ids/167574-1200-auto?v=638320917724870000",
+      "price": 20000,
+      "ratings": 3.2
+    },
+    {
+      "id": 5,
+      "title": "Microwave oven",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiYVs3xse5zH7hhmnIDtU6ZchYBpCOuid00Gev16kbQ&s",
+      "price": 23000,
+      "ratings": 3.8
+    },
+    {
+      "id": 6,
+      "title": "Bluetooth Speaker",
+      "src": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/speaker/mobile-tablet-speaker/e/k/4/wireless-rechargeable-brand-new-top-selling-portable-stereo-original-imagfya8pjqnz4mh.jpeg?q=70",
+      "price": 5000,
+      "ratings": 4.2
+    },
+    {
+      "id": 7,
+      "title": "External Hard Drive",
+      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/external-hard-drive/hdd/4/w/2/solid-performance-tiasy-original-imagy8egyu4hetyy.jpeg?q=70",
+      "price": 7000,
+      "ratings": 4.6
+    },
+    {
+      "id": 8,
+      "title": "Gaming Mouse",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/mouse/r/a/7/spectre-3600-dpi-gaming-sensor-and-7-colours-rainbow-lighting-original-imahybze9uzwtgez.jpeg?q=70",
+      "price": 2500,
+      "ratings": 4.7
+    },
+    {
+      "id": 9,
+      "title": "Keyboard",
+      "src": "https://rukminim2.flixcart.com/image/612/612/k3g73bk0/keyboard/desktop-keyboard/e/y/q/dell-kb-216-original-imaf8qpmu8zmqm9f.jpeg?q=70",
+      "price": 3000,
+      "ratings": 4.5
+    },
+    {
+      "id": 10,
+      "title": "Webcam",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/webcam/d/q/2/ft-2252-usb-webcam-640x480-resolution-30fps-frame-rate-built-in-original-imagz7xmzs7kbz2u.jpeg?q=70",
+      "price": 3500,
+      "ratings": 4.1
+    },
+    {
+      "id": 11,
+      "title": "Monitor",
+      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/monitor/n/r/g/-original-imagyr8vrpzzgrac.jpeg?q=70",
+      "price": 15000,
+      "ratings": 4.3
+    },
+    {
+      "id": 12,
+      "title": "Printer",
+      "src": "https://rukminim2.flixcart.com/image/612/612/k4a7c7k0/printer/y/j/z/canon-e3370-original-imafn2wyyxjjvzd6.jpeg?q=70",
+      "price": 12000,
+      "ratings": 4
+    },
+    {
+      "id": 13,
+      "title": "Camera",
+      "src": "https://rukminim2.flixcart.com/image/312/312/kvvad8w0/sports-action-camera/k/x/f/spy-magnet-camera-wifi-hidden-camera-wireless-hd-1080p-indoor-original-imafxeen9r3zepwy.jpeg?q=70",
+      "price": 25000,
+      "ratings": 4.8
+    },
+    {
+      "id": 14,
+      "title": "Smart TV",
+      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/television/o/j/s/32rt1022-thomson-original-imagpu4vshz5gsgm.jpeg?q=70",
+      "price": 40000,
+      "ratings": 4.7
+    },
+    {
+      "id": 15,
+      "title": "Soundbar",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/y/r/i/-original-imagt4wcgmzdrhqv.jpeg?q=70",
+      "price": 9000,
+      "ratings": 4.4
+    },
+    {
+      "id": 16,
+      "title": "VR Headset",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/smart-glass/n/9/g/cbvr-05-cyphon-original-imagr5sfhfvqbfcc.jpeg?q=70",
+      "price": 22000,
+      "ratings": 4.5
+    },
+    {
+      "id": 17,
+      "title": "Gaming Console",
+      "src": "https://rukminim2.flixcart.com/image/612/612/kdga1zk0/gamingconsole/h/s/g/pvp-gaming-console-with-1gb-internal-storage-and-3d-video-original-imafud2ezby2gwbe.jpeg?q=70",
+      "price": 35000,
+      "ratings": 4.9
+    },
+    {
+      "id": 18,
+      "title": "Electric Scooter",
+      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/electric-bike-scooter/p/e/e/-original-imagk232pzhx9h3z.jpeg?q=70",
+      "price": 20000,
+      "ratings": 4.2
+    },
+    {
+      "id": 19,
+      "title": "Microwave Oven",
+      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/microwave-new/y/t/t/-original-imagqkfykrwhpfqs.jpeg?q=70",
+      "price": 8000,
+      "ratings": 4.3
+    },
+    {
+      "id": 20,
+      "title": "Air Fryer",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/air-fryer/4/c/x/green-4-5-1200-nutrifry-smart-impex-original-imahyapkbtayfr4y.jpeg?q=70",
+      "price": 6000,
+      "ratings": 4.6
+    },
+    {
+      "id": 21,
+      "title": "Fitness Tracker",
+      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/smartwatch/q/f/u/44-116-android-ios-quashwin-no-original-imag963jgfxbdk8b.jpeg?q=70",
+      "price": 3000,
+      "ratings": 4
+    },
+    {
+      "id": 22,
+      "title": "Portable Air Conditioner",
+      "src": "https://rukminim2.flixcart.com/image/612/612/k5r2mq80/air-conditioner-new/v/x/c/pc12db-1-portable-fixed-speed-blue-star-original-imafzcwhep8jenxu.jpeg?q=70",
+      "price": 25000,
+      "ratings": 4.4
+    }
+  ],
+  "allUsersCart": {
+    "v@gmail.com": [
+      {
+        "id": 1,
+        "title": "SmartPhone",
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkz2kjdQjM6DX7mLSYMtBrQMF_wRCFb-3cxwI5rPg1A&s",
+        "price": 15000,
+        "ratings": 5
+      }
+    ],
+    "rekha@gmail.com": [
+      {
+        "id": 4,
+        "title": "Washing Machine",
+        "src": "https://whirlpoolindia.vtexassets.com/arquivos/ids/167574-1200-auto?v=638320917724870000",
+        "price": 20000,
+        "ratings": 3.2
+      }
+    ]
+  }
+}
