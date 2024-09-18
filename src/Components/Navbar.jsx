@@ -2,15 +2,30 @@ import { Link } from "react-router-dom";
 import LocationIcon from "../Icon/LocationIcon";
 import SearchIcon from "../Icon/SearchIcon";
 import SearchRoundIcon from "../Icon/SearchRoundIcon";
-import { Button, Flex, Image, Text, Input, InputGroup, InputLeftElement, InputRightElement } from "@chakra-ui/react";
+import { Button, Flex, Image, Text, Input, InputGroup, InputLeftElement, InputRightElement,useToast } from "@chakra-ui/react";
 import { AuthContext } from "../Contexts/AuthContextProvider";
 import { useContext } from "react";
+import { Avatar } from "@chakra-ui/react";
+
 
 function Navbar() {
     const { auth, toggle } = useContext(AuthContext);
+    const toast = useToast();
+    function handleToast(){
+        toast({
+            title: 'Logout Successfully.',
+            status: 'error',
+            duration: 3000,
+            isClosable: true,
+            position:'top'
+          })
+    }
+    
 
     function logout() {
+        localStorage.removeItem("loggedStatus");
         toggle();
+        handleToast();
     }
 
     function openInNewTab(url) {
@@ -27,10 +42,10 @@ function Navbar() {
                 <Text as='b' onClick={() => openInNewTab('/cancer')} style={{ cursor: 'pointer' }}>CANCER CARE</Text>
                 <Text as='b' onClick={() => openInNewTab('/partnerships')} style={{ cursor: 'pointer' }}>PARTNERSHIPS</Text>
                 {/* <Text as='b' onClick={() => openInNewTab('/care')} style={{ cursor: 'pointer' }}>CARE PLAN</Text> */}
-                {auth === 1 ? <Image borderRadius='full' boxSize='30px' src='data:image/png;base64,...' /> : null}
-                {auth === 1 ? <Button onClick={logout} colorScheme='red' size='xs'>LOGOUT</Button> : null}
-                {auth === 0 ? <Link to='/login'>Login</Link> : null}
-                {auth === 0 ? <Link to='/sign'>Sign Up</Link> : null}
+                {auth ? <Avatar size='xs' name='Segun Adebayo' src='https://bit.ly/sage-adebayo' /> : null}
+                {auth ? <Button onClick={logout} colorScheme='red' size='xs'>LOGOUT</Button> : null}
+                {!auth ? <Link to='/login'>Login</Link> : null}
+                {!auth ? <Link to='/sign'>Sign Up</Link> : null}
                 <Link to='/offers'>Offers</Link>
                 <Link to='/carts'><i className="fa-solid fa-cart-shopping"></i></Link>
                 <Link to='/need'>Need Help?</Link>

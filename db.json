@@ -11,185 +11,287 @@
     {
       "email": "nk@gmail.com",
       "id": 3
-    },
-    {
-      "email": "nkk@gmail.com",
-      "id": 4
     }
   ],
   "products": [
     {
       "id": 1,
-      "title": "SmartPhone",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkz2kjdQjM6DX7mLSYMtBrQMF_wRCFb-3cxwI5rPg1A&s",
+      "title": "First Aid Supplies",
+      "src": "https://via.placeholder.com/150",
       "price": 15000,
-      "ratings": 5
+      "ratings": 3,
+      "reviewCount": 32
     },
     {
       "id": 2,
-      "title": "TV",
-      "src": "https://5.imimg.com/data5/SELLER/Default/2023/4/299765792/GM/GW/BT/6158633/50-inch-smart-android-led-tv-500x500.jpg",
-      "price": 25000,
-      "ratings": 4
+      "title": "Diabetic Medication",
+      "src": "https://via.placeholder.com/150",
+      "price": 567,
+      "ratings": 4,
+      "reviewCount": 35
     },
     {
       "id": 3,
-      "title": "Laptop",
-      "src": "https://images-cdn.ubuy.co.in/633b75b241637808af7d4688-asus-laptop-l510-ultra-thin-laptop.jpg",
-      "price": 35000,
-      "ratings": 4.5
+      "title": "Liver Medication",
+      "src": "https://via.placeholder.com/150",
+      "price": 890,
+      "ratings": 2,
+      "reviewCount": 28
     },
     {
       "id": 4,
-      "title": "Washing Machine",
-      "src": "https://whirlpoolindia.vtexassets.com/arquivos/ids/167574-1200-auto?v=638320917724870000",
-      "price": 20000,
-      "ratings": 3.2
+      "title": "Heart Medication",
+      "src": "https://via.placeholder.com/150",
+      "price": 1200,
+      "ratings": 5,
+      "reviewCount": 42
     },
     {
       "id": 5,
-      "title": "Microwave oven",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiYVs3xse5zH7hhmnIDtU6ZchYBpCOuid00Gev16kbQ&s",
-      "price": 23000,
-      "ratings": 3.8
+      "title": "Blood Pressure Medication",
+      "src": "https://via.placeholder.com/150",
+      "price": 750,
+      "ratings": 2,
+      "reviewCount": 38
     },
     {
       "id": 6,
-      "title": "Bluetooth Speaker",
-      "src": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/speaker/mobile-tablet-speaker/e/k/4/wireless-rechargeable-brand-new-top-selling-portable-stereo-original-imagfya8pjqnz4mh.jpeg?q=70",
-      "price": 5000,
-      "ratings": 4.2
+      "title": "Antibiotic Medication",
+      "src": "https://via.placeholder.com/150",
+      "price": 620,
+      "ratings": 3,
+      "reviewCount": 30
     },
     {
       "id": 7,
-      "title": "External Hard Drive",
-      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/external-hard-drive/hdd/4/w/2/solid-performance-tiasy-original-imagy8egyu4hetyy.jpeg?q=70",
-      "price": 7000,
-      "ratings": 4.6
+      "title": "Pain Relief Medication",
+      "src": "https://via.placeholder.com/150",
+      "price": 350,
+      "ratings": 1,
+      "reviewCount": 25
     },
     {
       "id": 8,
-      "title": "Gaming Mouse",
-      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/mouse/r/a/7/spectre-3600-dpi-gaming-sensor-and-7-colours-rainbow-lighting-original-imahybze9uzwtgez.jpeg?q=70",
-      "price": 2500,
-      "ratings": 4.7
+      "title": "Vitamins and Supplements",
+      "src": "https://via.placeholder.com/150",
+      "price": 400,
+      "ratings": 4,
+      "reviewCount": 33
     },
     {
       "id": 9,
-      "title": "Keyboard",
-      "src": "https://rukminim2.flixcart.com/image/612/612/k3g73bk0/keyboard/desktop-keyboard/e/y/q/dell-kb-216-original-imaf8qpmu8zmqm9f.jpeg?q=70",
-      "price": 3000,
-      "ratings": 4.5
+      "title": "Allergy Medication",
+      "src": "https://via.placeholder.com/150",
+      "price": 450,
+      "ratings": 2,
+      "reviewCount": 37
     },
     {
       "id": 10,
-      "title": "Webcam",
-      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/webcam/d/q/2/ft-2252-usb-webcam-640x480-resolution-30fps-frame-rate-built-in-original-imagz7xmzs7kbz2u.jpeg?q=70",
-      "price": 3500,
-      "ratings": 4.1
+      "title": "Skincare Products",
+      "src": "https://via.placeholder.com/150",
+      "price": 700,
+      "ratings": 5,
+      "reviewCount": 40
     },
     {
       "id": 11,
-      "title": "Monitor",
-      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/monitor/n/r/g/-original-imagyr8vrpzzgrac.jpeg?q=70",
-      "price": 15000,
-      "ratings": 4.3
+      "title": "Digestive Health Supplements",
+      "src": "https://via.placeholder.com/150",
+      "price": 380,
+      "ratings": 3,
+      "reviewCount": 29
     },
     {
       "id": 12,
-      "title": "Printer",
-      "src": "https://rukminim2.flixcart.com/image/612/612/k4a7c7k0/printer/y/j/z/canon-e3370-original-imafn2wyyxjjvzd6.jpeg?q=70",
-      "price": 12000,
-      "ratings": 4
+      "title": "Weight Management Supplements",
+      "src": "https://via.placeholder.com/150",
+      "price": 550,
+      "ratings": 4,
+      "reviewCount": 31
     },
     {
       "id": 13,
-      "title": "Camera",
-      "src": "https://rukminim2.flixcart.com/image/312/312/kvvad8w0/sports-action-camera/k/x/f/spy-magnet-camera-wifi-hidden-camera-wireless-hd-1080p-indoor-original-imafxeen9r3zepwy.jpeg?q=70",
-      "price": 25000,
-      "ratings": 4.8
+      "title": "Eye Care Products",
+      "src": "https://via.placeholder.com/150",
+      "price": 600,
+      "ratings": 1,
+      "reviewCount": 34
     },
     {
       "id": 14,
-      "title": "Smart TV",
-      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/television/o/j/s/32rt1022-thomson-original-imagpu4vshz5gsgm.jpeg?q=70",
-      "price": 40000,
-      "ratings": 4.7
+      "title": "Oral Health Products",
+      "src": "https://via.placeholder.com/150",
+      "price": 250,
+      "ratings": 0,
+      "reviewCount": 23
     },
     {
       "id": 15,
-      "title": "Soundbar",
-      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/y/r/i/-original-imagt4wcgmzdrhqv.jpeg?q=70",
-      "price": 9000,
-      "ratings": 4.4
+      "title": "Hair Care Products",
+      "src": "https://via.placeholder.com/150",
+      "price": 800,
+      "ratings": 3,
+      "reviewCount": 39
     },
     {
       "id": 16,
-      "title": "VR Headset",
-      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/smart-glass/n/9/g/cbvr-05-cyphon-original-imagr5sfhfvqbfcc.jpeg?q=70",
-      "price": 22000,
-      "ratings": 4.5
+      "title": "Men's Health Products",
+      "src": "https://via.placeholder.com/150",
+      "price": 900,
+      "ratings": 3,
+      "reviewCount": 36
     },
     {
       "id": 17,
-      "title": "Gaming Console",
-      "src": "https://rukminim2.flixcart.com/image/612/612/kdga1zk0/gamingconsole/h/s/g/pvp-gaming-console-with-1gb-internal-storage-and-3d-video-original-imafud2ezby2gwbe.jpeg?q=70",
-      "price": 35000,
-      "ratings": 4.9
+      "title": "Women's Health Products",
+      "src": "https://via.placeholder.com/150",
+      "price": 1000,
+      "ratings": 2,
+      "reviewCount": 37
     },
     {
       "id": 18,
-      "title": "Electric Scooter",
-      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/electric-bike-scooter/p/e/e/-original-imagk232pzhx9h3z.jpeg?q=70",
-      "price": 20000,
-      "ratings": 4.2
+      "title": "Baby Care Products",
+      "src": "https://via.placeholder.com/150",
+      "price": 1100,
+      "ratings": 5,
+      "reviewCount": 41
     },
     {
       "id": 19,
-      "title": "Microwave Oven",
-      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/microwave-new/y/t/t/-original-imagqkfykrwhpfqs.jpeg?q=70",
-      "price": 8000,
-      "ratings": 4.3
+      "title": "First Aid Supplies",
+      "src": "https://via.placeholder.com/150",
+      "price": 200,
+      "ratings": 1,
+      "reviewCount": 24
     },
     {
       "id": 20,
-      "title": "Air Fryer",
-      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/air-fryer/4/c/x/green-4-5-1200-nutrifry-smart-impex-original-imahyapkbtayfr4y.jpeg?q=70",
-      "price": 6000,
-      "ratings": 4.6
-    },
-    {
-      "id": 21,
-      "title": "Fitness Tracker",
-      "src": "https://rukminim2.flixcart.com/image/312/312/xif0q/smartwatch/q/f/u/44-116-android-ios-quashwin-no-original-imag963jgfxbdk8b.jpeg?q=70",
-      "price": 3000,
-      "ratings": 4
-    },
-    {
-      "id": 22,
-      "title": "Portable Air Conditioner",
-      "src": "https://rukminim2.flixcart.com/image/612/612/k5r2mq80/air-conditioner-new/v/x/c/pc12db-1-portable-fixed-speed-blue-star-original-imafzcwhep8jenxu.jpeg?q=70",
-      "price": 25000,
-      "ratings": 4.4
+      "title": "Pet Care Products",
+      "src": "https://via.placeholder.com/150",
+      "price": 300,
+      "ratings": 3,
+      "reviewCount": 26
     }
   ],
   "allUsersCart": {
     "v@gmail.com": [
       {
         "id": 1,
-        "title": "SmartPhone",
-        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkz2kjdQjM6DX7mLSYMtBrQMF_wRCFb-3cxwI5rPg1A&s",
+        "title": "First Aid Supplies",
+        "src": "https://via.placeholder.com/150",
         "price": 15000,
-        "ratings": 5
+        "ratings": 3,
+        "reviewCount": 32
+      },
+      {
+        "id": 2,
+        "title": "Diabetic Medication",
+        "src": "https://via.placeholder.com/150",
+        "price": 567,
+        "ratings": 4,
+        "reviewCount": 35
+      },
+      {
+        "id": 3,
+        "title": "Liver Medication",
+        "src": "https://via.placeholder.com/150",
+        "price": 890,
+        "ratings": 2,
+        "reviewCount": 28
+      },
+      {
+        "id": 10,
+        "title": "Skincare Products",
+        "src": "https://via.placeholder.com/150",
+        "price": 700,
+        "ratings": 5,
+        "reviewCount": 40
+      },
+      {
+        "id": 7,
+        "title": "Pain Relief Medication",
+        "src": "https://via.placeholder.com/150",
+        "price": 350,
+        "ratings": 1,
+        "reviewCount": 25
       }
     ],
     "rekha@gmail.com": [
       {
+        "id": 1,
+        "title": "First Aid Supplies",
+        "src": "https://via.placeholder.com/150",
+        "price": 15000,
+        "ratings": 3,
+        "reviewCount": 32
+      },
+      {
+        "id": 2,
+        "title": "Diabetic Medication",
+        "src": "https://via.placeholder.com/150",
+        "price": 567,
+        "ratings": 4,
+        "reviewCount": 35
+      },
+      {
+        "id": 7,
+        "title": "Pain Relief Medication",
+        "src": "https://via.placeholder.com/150",
+        "price": 350,
+        "ratings": 1,
+        "reviewCount": 25
+      }
+    ],
+    "nk@gmail.com": [
+      {
+        "id": 11,
+        "title": "Digestive Health Supplements",
+        "src": "https://via.placeholder.com/150",
+        "price": 380,
+        "ratings": 3,
+        "reviewCount": 29
+      },
+      {
         "id": 4,
-        "title": "Washing Machine",
-        "src": "https://whirlpoolindia.vtexassets.com/arquivos/ids/167574-1200-auto?v=638320917724870000",
-        "price": 20000,
-        "ratings": 3.2
+        "title": "Heart Medication",
+        "src": "https://via.placeholder.com/150",
+        "price": 1200,
+        "ratings": 5,
+        "reviewCount": 42
+      },
+      {
+        "id": 3,
+        "title": "Liver Medication",
+        "src": "https://via.placeholder.com/150",
+        "price": 890,
+        "ratings": 2,
+        "reviewCount": 28
+      },
+      {
+        "id": 1,
+        "title": "First Aid Supplies",
+        "src": "https://via.placeholder.com/150",
+        "price": 15000,
+        "ratings": 3,
+        "reviewCount": 32
+      },
+      {
+        "id": 2,
+        "title": "Diabetic Medication",
+        "src": "https://via.placeholder.com/150",
+        "price": 567,
+        "ratings": 4,
+        "reviewCount": 35
+      },
+      {
+        "id": 8,
+        "title": "Vitamins and Supplements",
+        "src": "https://via.placeholder.com/150",
+        "price": 400,
+        "ratings": 4,
+        "reviewCount": 33
       }
     ]
   }

@@ -1,20 +1,24 @@
-import { createContext, useState } from "react"
+import { createContext, useState } from "react";
+
+// Create a context for authentication state
 export const AuthContext = createContext();
 
-export function AuthContextProvider({children}){
-    const [auth, setAuth] = useState(0);
-    function toggle(){
-        if(auth===1){
-            setAuth(0);
-        }
-        else{
-            setAuth(1);
-        }
+// Provider component for AuthContext
+export function AuthContextProvider({ children }) {
+    // State to manage authentication status, default is false (not authenticated)
+    const [auth, setAuth] = useState(false);
+    
+    // Function to toggle the authentication status
+    function toggle() {
+        setAuth(!auth);
     }
 
-    return(<>
-    <AuthContext.Provider value={{auth,toggle}}>
-        {children}
-    </AuthContext.Provider>
-    </>)
+    return (
+        <>
+            {/* Provide the authentication state and toggle function to the component tree */}
+            <AuthContext.Provider value={{ auth, toggle }}>
+                {children}
+            </AuthContext.Provider>
+        </>
+    );
 }

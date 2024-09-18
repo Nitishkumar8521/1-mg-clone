@@ -1,9 +1,4 @@
 import Footer from "../Components/Footer";
-
-
-
-
-
 import { Box, Button, Text, HStack, VStack } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
