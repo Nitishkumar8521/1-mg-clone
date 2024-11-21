@@ -4,6 +4,7 @@ const userModel = require("../Models/user.model");
 const checkAuthorization = require("../Middleware/check.authorization")
 const mongoose = require('mongoose')
 const cloudinary = require("cloudinary").v2;
+const auth=require('../Middleware/auth.middleware')
 require("dotenv").config();
 
 // Configure Cloudinary once at the start
@@ -17,7 +18,7 @@ cloudinary.config({
 
 const productRoute = express.Router();
 
-productRoute.get('/get-product',checkAuthorization(["seller","admin","user"]),async(req, res)=>{
+productRoute.get('/get-product',async(req, res)=>{
     try {
         const { q , sortBy='price', order=-1 } = req.query;
         const pipeline = [];
@@ -43,7 +44,19 @@ productRoute.get('/get-product',checkAuthorization(["seller","admin","user"]),as
     }
 })
 
-productRoute.post('/add-product', checkAuthorization(["seller"]), async (req, res) => {
+productRoute.get('/get-product/:id',auth, checkAuthorization(["seller"]),async(req, res)=>{
+    try {
+       const { id } = req.params;
+       console.log(id)
+       const product = await productModel.findOne({_id:id});
+       res.json({product});
+    } catch (error) {
+        res.json({"Error in product":error.message})
+    }
+})
+
+
+productRoute.post('/add-product',auth, checkAuthorization(["seller"]), async (req, res) => {
     try {
         if (!req.files || !req.files.photo) {
             return res.status(400).json({ error: "Photo is required" });
@@ -88,7 +101,7 @@ productRoute.post('/add-product', checkAuthorization(["seller"]), async (req, re
 });
 
 
-productRoute.patch('/update-product/:id',checkAuthorization(['admin','seller']),async(req, res)=>{
+productRoute.patch('/update-product/:id',auth,checkAuthorization(['admin','seller']),async(req, res)=>{
     try {        
         const product = await productModel.findOne({_id:req.params.id})
         if(!product){
@@ -108,7 +121,7 @@ productRoute.patch('/update-product/:id',checkAuthorization(['admin','seller']),
     }
 })
 
-productRoute.delete('/delete-product/:id',checkAuthorization(['seller']),async(req, res)=>{
+productRoute.delete('/delete-product/:id',auth,checkAuthorization(['seller']),async(req, res)=>{
     try {        
         const product = await productModel.findOne({_id:req.params.id})
         if(!product){

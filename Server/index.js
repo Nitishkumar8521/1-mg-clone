@@ -19,7 +19,7 @@ app.use(fileUpload({
 }))
 
 app.use('/user', userRoute);
-app.use('/product',auth,productRoute)
+app.use('/product',productRoute)
 
 app.get('/', (req, res) => {
     res.json({ msg: "Welcome to home page" });
