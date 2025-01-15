@@ -23,7 +23,7 @@ function Navbar() {
     
 
     function logout() {
-        localStorage.removeItem("loggedStatus");
+        localStorage.clear();
         toggle();
         handleToast();
     }
@@ -47,7 +47,7 @@ function Navbar() {
                 {!auth ? <Link to='/login'>Login</Link> : null}
                 {!auth ? <Link to='/sign'>Sign Up</Link> : null}
                 <Link to='/offers'>Offers</Link>
-                <Link to='/carts'><i className="fa-solid fa-cart-shopping"></i></Link>
+                {localStorage.getItem("role")=='seller'?null:<Link to='/carts'><i className="fa-solid fa-cart-shopping"></i></Link>}
                 <Link to='/need'>Need Help?</Link>
             </Flex>
             <Flex boxShadow='xs'>
@@ -67,7 +67,7 @@ function Navbar() {
                     </InputRightElement>
                 </InputGroup>
                 <Text p='0% 2%'>QUICK BUY! Get up to 25% off on medicines</Text>
-                <Button colorScheme='orange' p='5px 10px'>Quick order</Button>
+                {localStorage.getItem("role")=='seller' && <Text bg='red' fontWeight="bold" p='5px 10px'><Link to='/add-product'>Add Product</Link></Text>}
             </Flex>
         </>
     );

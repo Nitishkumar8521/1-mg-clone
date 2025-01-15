@@ -9,6 +9,7 @@ import {
   Button,
   Link as ChakraLink,
   Image,
+  Stack
 } from "@chakra-ui/react";
 import Sign_up from "../Pages/Sign_up";
 import { Link } from "react-router-dom";
@@ -60,7 +61,7 @@ function Footer() {
       <hr style={{ margin: "30px 5px" }} />
 
       {/* Footer links sections */}
-      <HStack spacing={20} ml="5%">
+      <Stack direction={['column', 'row']} spacing={20} ml="5%">
         {/* Know Us links */}
         <Box>
           <VStack align="start">
@@ -171,7 +172,7 @@ function Footer() {
             </ChakraLink>
           </VStack>
         </Box>
-      </HStack>
+      </Stack>
 
       {/* Horizontal line for separation */}
       <hr style={{ margin: "30px 5px" }} />

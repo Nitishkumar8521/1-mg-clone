@@ -9,12 +9,14 @@ import {
   Spinner,
   Alert,
   AlertIcon,
-  SimpleGrid
+  SimpleGrid,Divider,CardFooter,Button,ButtonGroup
 } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import { AuthContext } from "../Contexts/AuthContextProvider";
 import { useContext, useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
+import Loading from "../../Feedback/Loading";
+import Error from "../../Feedback/Error";
 
 function Carts() {
   // Access authentication context
@@ -24,18 +26,21 @@ function Carts() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [flag, setFlag] = useState(false)
 
   // Fetch products when the component mounts
   useEffect(() => {
       fetchProduct();
-  }, []);
+  }, [flag]);
 
   // Calculate the total price whenever products state changes
   useEffect(() => {
-      if (products.length > 0) {
+      if (Array.isArray(products) && products.length > 0) {
           const price = products.reduce((sum, ele) => sum + ele.price, 0);
           setTotalPrice(price);
-      }
+       }else{
+        setTotalPrice(0)
+       }
   }, [products]);
 
   // Redirect to login if not authenticated
@@ -46,13 +51,16 @@ function Carts() {
   // Function to fetch product data from the server
   async function fetchProduct() {
       try {
-          // Get the username from local storage
-          const user = JSON.parse(localStorage.getItem("loggedStatus")).username;
           setLoading(true);
           // Fetch data from server
-          let res = await fetch("http://localhost:3000/allUsersCart");
+          let res = await fetch(`https://demo-1mg-backend.onrender.com/user/get-cartItem/${localStorage.getItem("userId")}`,{
+            method:"GET",
+            headers:{
+                token:localStorage.getItem("token"),
+            }
+          });
           let data = await res.json();
-          setProducts(data[user]);
+          setProducts(data.cart);
           setLoading(false);
       } catch (error) {
           setLoading(false);
@@ -60,50 +68,54 @@ function Carts() {
       }
   }
 
+  async function handleDelete(id) {
+    try {
+        await fetch(`https://demo-1mg-backend.onrender.com/user/remove-fromCart/${id}`,{
+            method:"PATCH",
+            headers:{
+              token:localStorage.getItem("token"),
+              "Content-Type": "application/json",
+            }
+          })
+          setFlag(!flag)
+    } catch (error) {
+        console.log("Error in handleDelete in Cart Component",error.message)
+    }    
+      
+  }
+
   // Show a spinner while loading
   if (loading) {
-      return (
-          <Spinner
-              thickness="4px"
-              speed="0.65s"
-              emptyColor="gray.200"
-              color="blue.500"
-              size="xl"
-          />
-      );
+    return <Loading />
   }
 
   // Show an alert if there is an error
   if (error) {
-      return (
-          <Alert status="error">
-              <AlertIcon />
-              There was an error processing your request
-          </Alert>
-      );
+    return <Error />
   }
 
   return (
       <>
           {/* Display products in a grid layout */}
+          {(Array.isArray(products) && products.length>0) ? 
           <SimpleGrid columns={[2, 4, 5]} spacing={10}>
               {products.map((product) => (
-                  <Card key={product.id} maxW="sm">
+                  <Card key={product._id} maxW="sm">
                       <CardBody>
-                          <Image src={product.src} alt={product.name} borderRadius="lg" />
+                          <Image src={product.image} alt={product.name} borderRadius="lg" />
                           <Stack mt="6" spacing="3">
-                              <Text>{product.title}</Text>
+                              <Text>{product.name}</Text>
                               <Box display="flex" mt="2" alignItems="center">
                                   {Array(5)
                                       .fill("")
                                       .map((_, i) => (
                                           <StarIcon
                                               key={i}
-                                              color={i < product.ratings ? "teal.500" : "gray.300"}
+                                              color={i < product.rating ? "teal.500" : "gray.300"}
                                           />
                                       ))}
                                   <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                                      {product.reviewCount} reviews
+                                      {product.rating} reviews
                                   </Box>
                               </Box>
                               <Text color="blue.600" fontSize="2xl">
@@ -111,15 +123,29 @@ function Carts() {
                               </Text>
                           </Stack>
                       </CardBody>
+                      <Divider /> {/* Divider between card body and footer */}
+                      <CardFooter>
+                       <ButtonGroup spacing="1">
+                         <Button
+                              variant="ghost"
+                              colorScheme="blue"
+                              onClick={() => {
+                              handleDelete(product._id); // Handle adding product to cart
+                        }}
+                       >
+                         Remove {/* Button to add the product to cart */}
+                         </Button>
+                       </ButtonGroup>
+                      </CardFooter>
                   </Card>
               ))}
-          </SimpleGrid>
-          {/* Display message if the cart is empty */}
-          {products.length === 0 && (
+          </SimpleGrid>:
+          
               <Heading textAlign="center" as="h2">
                   Your Cart is Empty
               </Heading>
-          )}
+          
+        }
           {/* Display total price */}
           <Text m='5' border='2px dotted red' as='mark' fontSize='2xl'>Your total price = ₹{totalPrice}</Text>
       </>

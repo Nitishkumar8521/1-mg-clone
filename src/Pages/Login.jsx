@@ -7,15 +7,17 @@ import {
   Input,
   VStack,
   Button,
-  useToast,
+  useToast
 } from "@chakra-ui/react";
 import { useEffect, useState, useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthContextProvider";
+import Loading from "../../Feedback/Loading";
 
 function Login() {
   // State to manage the input value
   const [value, setValue] = useState(null);
+  const [loading, setLoading ] = useState(false)
   
   // Hook to navigate programmatically
   const navigate = useNavigate();
@@ -35,27 +37,34 @@ function Login() {
   }
 
   // Login function to verify user and handle navigation
-  function login() {
-    let email = value;
-    fetch("http://localhost:3000/users")
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (data) {
-        // Filter users based on the email entered
-        let exit = data.filter((ele) => ele.email === email);
-        if (exit.length > 0) {
-          handleToast({status: 'success'});
-          localStorage.setItem(
-            "loggedStatus",
-            JSON.stringify({username: exit[0].email })
-          );
-          toggle(); // Toggle authentication state
-          navigate("/"); // Navigate to home page
-        } else {
-          handleToast({status: 'error'});
-        }
-      });
+  async function login() {
+    try {
+      let email = value;
+      setLoading(true);
+      const response =await fetch("https://demo-1mg-backend.onrender.com/user/login",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify({email})
+    })
+    const data = await response.json();
+    if(data.token){
+      localStorage.setItem("token",data.token)
+      localStorage.setItem("userId",data.currentUser._id)
+      localStorage.setItem("role",data.currentUser.role);
+      localStorage.setItem("email",data.currentUser.email);
+      setLoading(false)
+      handleToast({status: 'success'});
+      toggle();
+      navigate('/');
+    }else{
+      setLoading(false)
+      handleToast({status:'error'});
+    }
+    } catch (error) {
+      handleToast({status:'error'});
+    }
   }
 
   // Focus on the input field when the component mounts
@@ -79,6 +88,11 @@ function Login() {
       position: 'top'
     });
   }
+
+  if (loading) {
+    return <Loading />
+  }
+  
 
   return (
     <>

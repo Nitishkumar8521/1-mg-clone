@@ -15,6 +15,8 @@ import Need_help from '../Pages/Need_help'; // Need help page component
 import PrivateRoute from "./PrivateRoute"; // Private route component for protected routes
 import Single_page from "../Pages/Single_page"; // Single page for individual product view
 import Diabetes from "../Pages/Diabetes"; // Diabetes category page component
+import Add_Product from "../../Admin/Add_product";
+import Edit_product from "../../Admin/Edit_product";
 
 // AllRoutes component that defines the different routes of the application
 function AllRoutes() {
@@ -37,7 +39,9 @@ function AllRoutes() {
                 </PrivateRoute>} /> {/* Carts route within PrivateRoute to ensure only authenticated users can access */}
             <Route path="/need" element={<Need_help />} /> {/* Need help route */}
             <Route path='/collagen/:id' element={<Single_page />}></Route> {/* Dynamic route for single product page based on product ID */}
-            <Route path='/categories/:name' element={<Diabetes />}></Route> {/* Dynamic route for categories like Diabetes based on category name */}
+            <Route path='/categories/:category' element={<Diabetes />}></Route> {/* Dynamic route for categories like Diabetes based on category name */}
+            <Route path='/add-product' element={<Add_Product />}></Route>
+            <Route path='/edit-product/:productId' element={<Edit_product />}></Route>
         </Routes>
     );
 }

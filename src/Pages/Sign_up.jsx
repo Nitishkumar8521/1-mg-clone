@@ -14,14 +14,17 @@ import { AuthContext } from "../Contexts/AuthContextProvider";
 import { useRef } from "react";
 // Importing custom hook for handling toasts
 import { useHandleToast } from "../Icon/Toast";
+import Error from "../../Feedback/Error"
+import Loading from "../../Feedback/Loading";
 
 function Sign_up() {
   // State to manage the value of the email input
   const [value, setValue] = useState("");
   const navigate = useNavigate();
-  const { toggle } = useContext(AuthContext);
   const signRef = useRef(null);
   const handleToast = useHandleToast();
+  const [loading, setLoading] = useState(false)
+  const [error, setError ] = useState(false)
 
   // Handler for input change
   function handleChange(event) {
@@ -29,46 +32,29 @@ function Sign_up() {
   }
 
   // Function to handle form submission
-  function saveData(event) {
+  async function saveData(event) {
     event.preventDefault(); // Prevent the default form submission behavior
     let email_id = value;
     let obj = {
       email: email_id,
     };
-    // Fetch existing users
-    fetch("http://localhost:3000/users")
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (data) {
-        // Check if the email already exists
-        let exit = data.some((ele) => ele.email === email_id);
-        if (exit) {
-          alert("Email id already exists"); // Alert if email exists
-        } else {
-          // Otherwise, add new user
-          fetch("http://localhost:3000/users", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(obj),
-          }).then(() => {
-            // Save login status to local storage
-            localStorage.setItem(
-              "loggedStatus",
-              JSON.stringify({ status: true, username: value })
-            );
-            toggle(); // Update authentication context
-            handleToast({ status: "success" }); // Show success toast
-            navigate("/"); // Redirect to home page
-            localStorage.setItem(
-              "loggedStatus",
-              JSON.stringify({ username: value })
-            );
-          });
-        }
+    try {
+      setLoading(true)
+      await fetch("https://one-mg-backend-2.onrender.com/user/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(obj),
+      }).then(() => {
+        setLoading(false)
+        handleToast({ status: "success" }); // Show success toast
+        navigate("/login"); // Redirect to home page
       });
+    } catch (error) {
+      setLoading(false)
+      setError(true)
+    }  
   }
 
   // Function to navigate to login page
@@ -80,6 +66,13 @@ function Sign_up() {
   useEffect(() => {
     signRef.current.focus();
   }, []);
+
+  if(loading){
+    return <Loading />
+  }
+  if(error){
+    return <Error />
+  }
 
   return (
     <HStack gap={200}>
@@ -142,5 +135,6 @@ function Sign_up() {
     </HStack>
   );
 }
+
 
 export default Sign_up;

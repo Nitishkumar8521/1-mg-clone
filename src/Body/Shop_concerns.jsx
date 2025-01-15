@@ -27,7 +27,7 @@ function Shop_concerns() {
 
                 {/* Second health concern box for Heart Care */}
                 <Box textAlign='center'>
-                    <Link to='/categories/Heart_Care'>
+                    <Link to='/categories/heart'>
                         <Image p='30px' src='https://onemg.gumlet.io/629aaf65-515f-4069-b730-28618f78597b.png?format=auto'></Image> {/* Heart Care image */}
                         <Text as='samp'>Heart Care</Text> {/* Text label for Heart Care */}
                     </Link>
@@ -35,7 +35,7 @@ function Shop_concerns() {
 
                 {/* Third health concern box for Stomach Care */}
                 <Box textAlign='center'>
-                    <Link to='/categories/Stomach_Care'>
+                    <Link to='/categories/stomach'>
                         <Image p='30px' src='https://onemg.gumlet.io/b251c9cf-8d88-4fb8-8c3c-7b328caa9f70.png?format=auto'></Image> {/* Stomach Care image */}
                         <Text as='samp'>Stomach Care</Text> {/* Text label for Stomach Care */}
                     </Link>
@@ -43,7 +43,7 @@ function Shop_concerns() {
 
                 {/* Fourth health concern box for Liver Care */}
                 <Box textAlign='center'>
-                    <Link to='/categories/Liver_Care'>
+                    <Link to='/categories/liver'>
                         <Image p='30px' src='https://onemg.gumlet.io/573d8a1a-edd0-46a5-a0fe-01a1c2bcc8f2.png?format=auto'></Image> {/* Liver Care image */}
                         <Text as='samp'>Liver Care</Text> {/* Text label for Liver Care */}
                     </Link>
@@ -51,7 +51,7 @@ function Shop_concerns() {
 
                 {/* Fifth health concern box for Bone, Joint, & Muscle Care */}
                 <Box textAlign='center'>
-                    <Link to='/categories/Bone_Jonint'>
+                    <Link to='/categories/bone'>
                         <Image p='30px' src='https://onemg.gumlet.io/a1af8b43-2836-483d-8709-99eff1cc6f70.png?format=auto'></Image> {/* Bone, Joint & Muscle Care image */}
                         <Text as='samp'>Bone, Jonint & Muscle Care</Text> {/* Text label for Bone, Joint & Muscle Care */}
                     </Link>
@@ -59,7 +59,7 @@ function Shop_concerns() {
 
                 {/* Sixth health concern box for Kidney Care */}
                 <Box textAlign='center'>
-                    <Link to='/categories/Kidney_Care'>
+                    <Link to='/categories/kidney'>
                         <Image p='30px' src='https://onemg.gumlet.io/96f9ed8a-ba62-426c-bd66-6762f40f3370.png?format=auto'></Image> {/* Kidney Care image */}
                         <Text as='samp'>Kidney Care</Text> {/* Text label for Kidney Care */}
                     </Link>
@@ -67,7 +67,7 @@ function Shop_concerns() {
 
                 {/* Seventh health concern box for Derma Care */}
                 <Box textAlign='center'>
-                    <Link to='/categories/Derma_Care'>
+                    <Link to='/categories/derma'>
                         <Image p='30px' src='https://onemg.gumlet.io/730dbe50-4bdc-4fa8-9a09-93bc5d6c6f38.png?format=auto'></Image> {/* Derma Care image */}
                         <Text as='samp'>Derma Care</Text> {/* Text label for Derma Care */}
                     </Link>
